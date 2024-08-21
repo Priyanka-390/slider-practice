@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 const TabsTitle = () => {
-  // Get the initial active tab from localStorage or default to 0 (Tab-1)
+
   const [activeTab, setActiveTab] = useState(
     parseInt(localStorage.getItem("activeTab")) || 0
   );
 
-  // Save the active tab index to localStorage whenever it changes
+
   useEffect(() => {
     localStorage.setItem("activeTab", activeTab);
   }, [activeTab]);
 
-  // Function to handle tab click
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
@@ -43,9 +42,13 @@ const TabsTitle = () => {
               </h3>
               <p className="text-lg font-normal text-black">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                ipsum temporibus ullam culpa praesentium iste dolorum, alias
-                eaque facere non sunt, aspernatur quibusdam voluptatum at
-                expedita ad exercitationem eveniet repellendus.
+                ipsum temporibus Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Illo ipsum temporibus ullam culpa praesentium
+                iste dolorum, alias eaque facere non sunt, aspernatur quibusdam
+                voluptatum at expedita ad exercitationem eveniet repellendus.
+                ullam culpa praesentium iste dolorum, alias eaque facere non
+                sunt, aspernatur quibusdam voluptatum at expedita ad
+                exercitationem eveniet repellendus.
               </p>
             </div>
           )}
@@ -58,7 +61,8 @@ const TabsTitle = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
                 ipsum temporibus ullam culpa praesentium iste dolorum, alias
                 eaque facere non sunt, aspernatur quibusdam voluptatum at
-                expedita ad exercitationem eveniet repellendus.
+                expedita ad exercitationem eveniet repellendus.ipsum temporibus
+                ullam culpa praesentium iste dolorum, alias
               </p>
             </div>
           )}
