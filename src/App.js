@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import PracticeSlider from './components/PracticeSlider';
-import SliderComponent from './components/SliderComponent';
+import SliderPractice from './components/SliderPractice';
+import TabSlider from './components/TabSlider';
 
 function App() {
   return (
     <div>
       {/* <PracticeSlider /> */}
-      <SliderComponent/>
+      <SliderPractice />
+      <TabSlider/>
     </div>
   );
 }

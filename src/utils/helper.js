@@ -5,5 +5,5 @@ import img4 from "../assets/images/webp/img-4.webp";
 import img5 from "../assets/images/webp/img-5.webp"
 
 export const SLIDER_DATA_LIST = [
-   img1, img2, img3, img4, img5
+   img1, img2, img3, img4, img5,
 ]
