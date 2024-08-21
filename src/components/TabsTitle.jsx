@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 const TabsTitle = () => {
+  // Function to get the active tab from the query parameters
+  const getActiveTabFromQuery = () => {
+    const params = new URLSearchParams(window.location.search);
+    return parseInt(params.get("tab")) || 0;
+  };
 
-  const [activeTab, setActiveTab] = useState(
-    parseInt(localStorage.getItem("activeTab")) || 0
-  );
-
+  const [activeTab, setActiveTab] = useState(getActiveTabFromQuery);
 
   useEffect(() => {
-    localStorage.setItem("activeTab", activeTab);
+    const params = new URLSearchParams(window.location.search);
+    params.set("tab", activeTab);
+    // Use window.history.pushState to update the URL without reloading
+    window.history.pushState(null, "", `?${params.toString()}`);
   }, [activeTab]);
 
   const handleTabClick = (index) => {
