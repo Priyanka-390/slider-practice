@@ -12,6 +12,7 @@
 }
 .slick-prev {
     left: 45% !important; 
+    z-index: 12;
 }
 .slick-next {
     right: 45% !important; 
@@ -30,5 +31,4 @@
 }
 #sec .slick-track {
     padding-top: 70px;
-    padding-bottom: 70px;
 }
