@@ -85,7 +85,7 @@ function TabSlider() {
   }, [dragging]);
 
   return (
-    <div className="-mt-20 mb-14 relative">
+    <div className="-mt-28 mb-14 relative">
       <button
         onClick={handlePrevClick}
         className="absolute left-[5%] top-[63%] transform -translate-y-1/2 p-2 bg-transparent border-2 border-black hover:bg-gray-400 rounded-full z-20"
@@ -113,7 +113,7 @@ function TabSlider() {
               onClick={() => handleTabClick(index)}
               className={`py-2 px-4 transition-all duration-300 ${
                 activeTab === index
-                  ? "border-black scale-110"
+                  ? "border-black scale-125"
                   : "border-transparent"
               }`}
             >
@@ -132,7 +132,7 @@ function TabSlider() {
         <div className="slider-content flex justify-center items-center max-w-[1140px] mx-auto">
           <img
             src={SLIDER_DATA_LIST[activeTab]}
-            className={`h-96 w-[1100px] object-cover transition-opacity duration-300 ${
+            className={`h-96 w-[1000px] object-cover transition-opacity duration-300 ${
               fade ? "opacity-0" : "opacity-100"
             } border-4 border-black`}
             alt={`Tab ${activeTab + 1} image`}
