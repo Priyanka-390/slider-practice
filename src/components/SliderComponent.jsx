@@ -17,7 +17,9 @@ function SliderComponent() {
       slidesToShow: 4.5,
       infinite: true, // This replaces loop
       centerMode: true,
-      arrows: true,
+        arrows: true,
+        autoplay: true,
+      autoplaySpeed:2000,
       centerPadding: "20px",
       swipeToSlide: true,
       focusOnSelect: true,
@@ -83,8 +85,9 @@ function SliderComponent() {
     };
 
   return (
-    <div className="max-w-[1440px] px-4 mx-auto">
-      <div className="slider-container min-h-screen my-10">
+      <div className="max-w-[1440px] px-4 mx-auto">
+          <h1 className="font-extralight italic font-mono text-center xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-5xl">SLIDER</h1>
+      <div className="slider-container min-h-screen mt-10">
         <Slider
           arrows={false}
           className="flex justify-center items-center max-w-[1140px] mx-auto"
