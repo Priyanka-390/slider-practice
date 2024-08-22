@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const TabsTitle = () => {
-  // Function to get the active tab from the query parameters
   const getActiveTabFromQuery = () => {
     const params = new URLSearchParams(window.location.search);
     return parseInt(params.get("tab")) || 0;
@@ -12,7 +11,6 @@ const TabsTitle = () => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     params.set("tab", activeTab);
-    // Use window.history.pushState to update the URL without reloading
     window.history.pushState(null, "", `?${params.toString()}`);
   }, [activeTab]);
 
@@ -24,7 +22,6 @@ const TabsTitle = () => {
     <div className="py-10">
       <div className="container max-w-[1140px] mx-auto px-4">
         <div className="flex gap-9">
-          {/* Tab Links */}
           {["Tab-1", "Tab-2", "Tab-3", "Tab-4"].map((tab, index) => (
             <button
               key={index}
